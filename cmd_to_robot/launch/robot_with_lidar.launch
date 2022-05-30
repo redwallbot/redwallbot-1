@@ -1,0 +1,9 @@
+<launch>
+    <!--include file="$(find openni_launch)/launch/openni.launch" /-->
+    <include file="$(find lms1xx)/launch/LMS1xx.launch" />
+
+    <node pkg="cmd_to_robot" type="cmd_to_robot" name="cmd_to_plc" />
+    <node pkg="robot_teleop" type="joystick_pub" name="joystick_pub" output="screen"/>
+    <node pkg="rosbag" type="record" name="bag_record" args="/scan -o /home/redwall/bags/test.bag" />
+
+</launch>

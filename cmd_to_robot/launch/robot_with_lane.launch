@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find openni_launch)/launch/openni.launch" />
+
+    <node pkg="cmd_to_robot" type="cmd_to_robot" name="cmd_to_plc" />
+    <node pkg="robot_teleop" type="joystick_pub" name="joystick_pub" output="screen"/>
+    <node pkg="follow_lane" type="follow_lane" name="follow_lane" />
+</launch>

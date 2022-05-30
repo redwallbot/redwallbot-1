@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="cmd_to_robot" type="cmd_to_robot" name="cmd_to_plc" />
+    <node pkg="robot_teleop" type="joystick_pub" name="joystick_pub" output="screen"/>
+</launch> 

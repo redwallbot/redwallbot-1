@@ -1,0 +1,5 @@
+<launch>
+    <!--include file="$(find openni_launch)/launch/openni.launch" /-->
+    <node pkg="cmd_to_robot" type="cmd_to_robot" name="cmd_to_plc" />
+
+</launch>
